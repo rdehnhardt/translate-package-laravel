@@ -1,0 +1,21 @@
+{
+  "name": "baconfy/translate-package-laravel",
+  "description": "",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Renato Dehnhardt",
+      "email": "renatotkd@gmail.com"
+    }
+  ],
+  "require": {
+    "guzzlehttp/guzzle": "~6.0",
+    "vlucas/phpdotenv": "^2.2",
+    "illuminate/support": "~5.2"
+  },
+  "autoload": {
+    "files": [
+      "src/helpers.php"
+    ]
+  }
+}
