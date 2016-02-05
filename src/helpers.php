@@ -1,7 +1,6 @@
 <?php
 
 use GuzzleHttp\Client;
-use App;
 
 if (!function_exists('__')) {
     function __($key)
