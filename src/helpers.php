@@ -9,12 +9,8 @@ if (!function_exists('__')) {
         $client = new Client(['base_uri' => env('TRANSLATE_URL')]);
         $translate = $client->get('api/translate', ['query' => ['key' => $key, 'locale' => App::getLocale()]]);
 
-        if ($translate->getStatusCode() == 200) {
-            $message = json_decode($translate->getBody()->getContents());
-
-            if ($message->status) {
-                return $message->message;
-            }
+        if ($translate->getStatusCode() === 200) {
+            return $translate->getBody()->getContents();
         }
     }
 }
